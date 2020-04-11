@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;print&apos; in &apos;br.com.alura.servlet.Servlet.service(...)&apos; to &apos;out&apos;&#x0D;&#x0A;- Original project: &apos;Gerenciador&apos;&#x0D;&#x0A;- Original element: &apos;br.com.alura.servlet.Servlet.service(HttpServletRequest, HttpServletResponse).print&apos;&#x0D;&#x0A;- Renamed element: &apos;print&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;print&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;br.com.alura.servlet{Servlet.java[Servlet~service~QHttpServletRequest;~QHttpServletResponse;@print!465!501!477!481!QPrintWriter;!0!false" name="out" references="true" stamp="1585841313083" version="1.0"/>
+</session>

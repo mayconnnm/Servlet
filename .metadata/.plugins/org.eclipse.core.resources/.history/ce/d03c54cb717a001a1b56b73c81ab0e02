@@ -1,0 +1,11 @@
+
+String novaEmpresa = "Alura";
+
+<!DOCTYPE>
+<html>
+<head>
+</head>
+<body>
+	A <% novaEmpresa %> foi cadastrada!
+</body>
+</html>

@@ -1,0 +1,11 @@
+<%
+	String novaEmpresa = "Alura";
+%>
+<!DOCTYPE>
+<html>
+<head>
+</head>
+<body>
+	A empresa <% out.println(novaEmpresa); %> foi cadastrada!
+</body>
+</html>
