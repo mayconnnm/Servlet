@@ -1,8 +1,10 @@
 package br.com.alura.servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,29 +20,47 @@ public class NovaEmpresaServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("Cadastrando nova empresa");
 		String nomeEmpresa = request.getParameter("nome");
+		String dataAbertura = request.getParameter("dataAbertura");
+
+		Date data = null;
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			data = sdf.parse(dataAbertura);
+		} catch (ParseException e) {
+			throw new ServletException(e);
+		}
 
 		Empresa empresa = new Empresa();
-		empresa.setId(1);
+		empresa.setId(3);
 		empresa.setNome(nomeEmpresa);
+		empresa.setData(data);
 
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
-
+		
+		response.sendRedirect("listaEmpresas");
+		
 		// Despachando para
-		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
-		// Pendurando um valor 
-		request.setAttribute("nome", empresa.getNome());
+		// RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
+		
+		// Despachando para outro servlet
+		// RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");
+		
+		// Pendurando um valor
+		// request.setAttribute("nome", empresa.getNome());
+		// request.setAttribute("dataAbertura", empresa.getData());
+		
 		// Despachando o que
-		rd.forward(request, response);
-
-//		PrintWriter out = response.getWriter();
-//		out.println("<html>");
-//		out.println("<head>");
-//		out.println("</head>");
-//		out.println("<body>");
-//		out.println("Empresa " + nomeEmpresa + " cadastrada com sucesso!");
-//		out.println("</body>");
-//		out.println("</html>");
+		// rd.forward(request, response);
+	
+		// PrintWriter out = response.getWriter();
+		// out.println("<html>");
+		// out.println("<head>");
+		// out.println("</head>");
+		// out.println("<body>");
+		// out.println("Empresa " + nomeEmpresa + " cadastrada com sucesso!");
+		// out.println("</body>");
+		// out.println("</html>");
 	}
 
 }

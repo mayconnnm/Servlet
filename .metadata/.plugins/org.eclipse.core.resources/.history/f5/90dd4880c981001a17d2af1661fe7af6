@@ -1,0 +1,25 @@
+package br.com.alura.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+@WebServlet("/removeEmpresa")
+public class RemoveEmpresaServlet extends HttpServlet {
+
+	private static final long serialVersionUID = -3728441045549469200L;
+
+	@Override
+	protected void doDelete(HttpServletRequest req, javax.servlet.http.HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		String removeEmpresa = req.getParameter("empresa");
+		
+		Banco banco = new Banco();
+		banco.remove(id);
+	}
+
+}

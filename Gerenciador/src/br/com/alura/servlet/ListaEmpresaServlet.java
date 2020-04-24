@@ -15,7 +15,8 @@ public class ListaEmpresaServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -532326626731561716L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	// O método doGet não recebe uma requisição do tipo post
+	protected void /* doGet */ service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		Banco banco = new Banco();
