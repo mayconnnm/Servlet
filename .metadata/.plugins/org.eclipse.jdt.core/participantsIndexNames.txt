@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\Maycon\Documents\Java\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3553439155.index
-\Gerenciador\src
-C:\Users\Maycon\Documents\GitHub\Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3553439155.index
-\Gerenciador\src
